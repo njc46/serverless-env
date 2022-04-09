@@ -1,0 +1,18 @@
+name: 'latex-env'
+description: 'latex-env'
+inputs:
+  message:
+    description: 'my message'
+    required: true
+    default: 'hello'
+  enter:
+    description: 'enter'
+    required: true
+    default: 'echo "hello from echo"'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.message }}
+    - ${{ inputs.enter }}
