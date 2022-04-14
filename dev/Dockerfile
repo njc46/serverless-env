@@ -38,6 +38,8 @@ RUN apt-get update \
 #RUN rustup toolchain install nightly-x86_64-unknown-linux-musl \
 #    && rustup default nightly-x86_64-unknown-linux-musl
 
+RUN rustup component add rust-src --toolchain nightly-x86_64-unknown-linux-gnu
+
 RUN npm install -g serverless serverless-rust serverless-domain-manager  
 
 ENTRYPOINT [ "/bin/zsh" ]
