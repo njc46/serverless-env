@@ -1,4 +1,4 @@
-FROM docker.io/njc2/latex-env:alpine
+FROM docker.io/njc2/serverless-env:alpine
 
 ADD ./entrypoint.sh /usr/bin/entrypoint.sh
 
