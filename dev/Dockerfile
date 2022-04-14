@@ -1,5 +1,5 @@
 #FROM node:16-alpine AS node
-FROM liuchong/rustup:1.53.0-musl
+FROM rustlang/rust:nightly
 
 RUN apt-get update
 RUN apt-get install -y \
@@ -34,6 +34,9 @@ RUN apt-get update \
 
 #COPY --from=node /usr/local/bin/node /usr/local/bin/node
 #COPY --from=node /usr/local/bin/npm /usr/local/bin/npm
+
+#RUN rustup toolchain install nightly-x86_64-unknown-linux-musl \
+#    && rustup default nightly-x86_64-unknown-linux-musl
 
 RUN npm install -g serverless serverless-rust serverless-domain-manager  
 
