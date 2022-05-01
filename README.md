@@ -1,3 +1,3 @@
-# latex env
+# Serverless Environment
 
-Loads a LaTeX environment
+Loads a Serverless environment for deployment.
